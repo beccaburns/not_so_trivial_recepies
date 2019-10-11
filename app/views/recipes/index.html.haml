@@ -10,9 +10,9 @@
       = text_field_tag(:search, params[:search], placeholder: "Search")
       = submit_tag ("Submit")
     - if @recipes.nil?
-      %p Please search for ingredient
+      %p Please search for an ingredient.
     - elsif @recipes == 'error'
-      %p There is no recipe with that ingredient
+      %p Oops! We do not have a recipe with that ingredient.
     - else
       - @recipes.each do |recipe|
         %h3.subtle
