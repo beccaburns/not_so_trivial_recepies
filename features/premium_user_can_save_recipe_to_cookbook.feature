@@ -5,10 +5,9 @@ Feature: User can save recipe to cookbook
 
   Background:
   Given the following user exists
-  |||
-  |||
-  
-  And I am logged in 
+  | email        | password |
+  | john@doe.com | password |
+  And I am logged in as "john@doe.com"
 
   Scenario: Save recipe to cookbook for premium user
     Given I visit the home page
