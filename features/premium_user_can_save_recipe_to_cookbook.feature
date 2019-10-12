@@ -7,11 +7,10 @@ Feature: Premium user can save recipe to cookbook
   Given the following user exists
   | email            | password    |
   | johndoe@mail.com | password123 |
-
-  Given I am logged in as "johndoe@mail.com"
+  And I am logged in as "johndoe@mail.com"
 
   Scenario: Premium user saves recipe to cookbook
-    Given I am on the home page
+    Given I visit the home page
     When I fill in "Search" with "apples"
     And I click "Submit"
     And I click "Dried Apples"
