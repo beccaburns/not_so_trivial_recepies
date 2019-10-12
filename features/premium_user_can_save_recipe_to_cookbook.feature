@@ -16,5 +16,5 @@ Feature: User can save recipe to cookbook
     And I click "Dried Apples"
     Then I should see "Position racks in the upper and lower third of the oven; preheat to 200F. Line 2 large baking sheets with parchment paper."
     And I should see "Save to Cookbook"
-    And I click on "Save to Cookbook"
+    And I click "Save to Cookbook"
     Then I should see "Cookbook Recipes"
