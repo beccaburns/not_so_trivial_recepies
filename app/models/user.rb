@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :recipes
+  has_many :favorites, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
