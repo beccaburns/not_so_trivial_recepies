@@ -19,4 +19,12 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  def favorite(recipe)
+    favorite.find_or_create_by(recipe: recipe)
+  end
+
+  def unfavorite(recipe)
+    favorite.where(recipe: recipe).destroy_all
+  end
 end
