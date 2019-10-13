@@ -13,5 +13,5 @@
           %span.card-description.subtle= step['step']
           %p
     = link_to 'Back', root_path
-    = link_to 'Save to Cookbook'
+    = link_to 'Save to Cookbook', recipe_favorite_path, method: :post
     %p 

@@ -20,11 +20,11 @@ class User < ApplicationRecord
     end
   end
 
-  def favorite(@recipe)
-    favorite.find_or_create_by(recipe: @recipe)
+  def favorite(recipe)
+    favorite.find_or_create_by(recipe: recipe)
   end
 
-  def unfavorite(@recipe)
-    favorite.where(recipe: @recipe).destroy_all
+  def unfavorite(recipe)
+    favorite.where(recipe: recipe).destroy_all
   end
 end
